@@ -1,66 +1,65 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class CardFlip : MonoBehaviour
+public class Card : MonoBehaviour
 {
-    public float rotationSpeed = 360f; // Grados por segundo
-    public GameObject cardBack;
-    public bool cardBackIsActive;
-    private bool isFlipping = false;
-    private Quaternion targetRotation;
-    private bool hasFlipped = false; // Para evitar que gire más de una vez
+    private SpriteRenderer rend;
+
+    [SerializeField]
+    private Sprite faceSprite, backSprite;
+
+    private bool coroutineAllowed, facedUp;
 
     // Start is called before the first frame update
     void Start()
     {
-        cardBackIsActive = false;
-        targetRotation = transform.rotation; // Inicializa la rotación objetivo
+        rend = GetComponent<SpriteRenderer>();
+        rend.sprite = backSprite;
+        coroutineAllowed = true;
+        facedUp = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnMouseDown()
     {
-        // Solo permite el giro si no se ha hecho ya
-        if (Input.GetMouseButtonDown(0) && !isFlipping && !hasFlipped)
+        if (coroutineAllowed)
         {
-            StartFlip();
+            StartCoroutine(RotateCard());
         }
+    }
 
-        // Continuar rotando hacia la rotación objetivo
-        if (isFlipping)
+    private IEnumerator RotateCard()
+    {
+        coroutineAllowed = false;
+
+        if (!facedUp)
         {
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-
-            // Verificar si llegamos a la rotación objetivo
-            if (Quaternion.Angle(transform.rotation, targetRotation) < 0.1f)
+            for (float i = 0f; i <= 180f; i += 10f)
             {
-                isFlipping = false;
-                Flip(); // Cambiar la visibilidad de la carta cuando termina el giro
-                hasFlipped = true; // Marcar que ya se hizo un giro
+                transform.rotation = Quaternion.Euler(0f, i, 0f);
+                if (i == 90f)
+                {
+                    rend.sprite = faceSprite;
+                }
+                yield return new WaitForSeconds(0.01f);
             }
         }
-    }
 
-    public void StartFlip()
-    {
-        isFlipping = true;
-
-        // Establecer la nueva rotación objetivo (180 grados en el eje Y)
-        targetRotation = Quaternion.Euler(transform.eulerAngles.x, transform.eulerAngles.y + 180f, transform.eulerAngles.z);
-    }
-
-    public void Flip()
-    {
-        // Alternar la visibilidad de la parte trasera de la carta
-        if (cardBackIsActive)
+        else if (facedUp)
         {
-            cardBack.SetActive(false);
-            cardBackIsActive = false;
+            for (float i = 180f; i >= 0f; i -= 10f)
+            {
+                transform.rotation = Quaternion.Euler(0f, i, 0f);
+                if (i == 90f)
+                {
+                    rend.sprite = backSprite;
+                }
+                yield return new WaitForSeconds(0.01f);
+            }
         }
-        else
-        {
-            cardBack.SetActive(true);
-            cardBackIsActive = true;
-        }
+
+        coroutineAllowed = true;
+
+        facedUp = !facedUp;
     }
 }
