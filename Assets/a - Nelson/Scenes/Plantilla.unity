@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 123881966}
   - component: {fileID: 123881965}
   m_Layer: 5
-  m_Name: Home (1)
+  m_Name: MapButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -256,7 +256,7 @@ GameObject:
   - component: {fileID: 578652723}
   - component: {fileID: 578652722}
   m_Layer: 5
-  m_Name: Home (4)
+  m_Name: SettingsButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -478,7 +478,7 @@ GameObject:
   - component: {fileID: 753295461}
   - component: {fileID: 753295460}
   m_Layer: 5
-  m_Name: Home (3)
+  m_Name: NotifButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -598,7 +598,7 @@ GameObject:
   - component: {fileID: 1224765248}
   - component: {fileID: 1224765247}
   m_Layer: 5
-  m_Name: Home
+  m_Name: LogrosButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1198,7 +1198,7 @@ GameObject:
   - component: {fileID: 2093056674}
   - component: {fileID: 2093056673}
   m_Layer: 5
-  m_Name: Home (2)
+  m_Name: HomeButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
