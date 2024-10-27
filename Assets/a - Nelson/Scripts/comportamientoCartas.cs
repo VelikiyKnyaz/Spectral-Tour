@@ -13,6 +13,9 @@ public class EncuestaManager : MonoBehaviour
     public GameObject panelResultadoArtista;
     public GameObject panelResultadoPolitico;
 
+    // Variable pública que almacenará el resultado del test
+    public string resultadoTest = null;  // Será nulo inicialmente
+
     // Puntajes para los diferentes roles
     private int puntajeEmpresario = 0;
     private int puntajeFilantropo = 0;
@@ -90,5 +93,15 @@ public class EncuestaManager : MonoBehaviour
 
         // Activar el panel seleccionado
         panelSeleccionado.SetActive(true);
+
+        // Actualizar la variable pública con el resultado del test
+        if (panelSeleccionado == panelResultadoEmpresario)
+            resultadoTest = "Empresario";
+        else if (panelSeleccionado == panelResultadoFilantropo)
+            resultadoTest = "Filantropo";
+        else if (panelSeleccionado == panelResultadoArtista)
+            resultadoTest = "Artista";
+        else if (panelSeleccionado == panelResultadoPolitico)
+            resultadoTest = "Politico";
     }
 }
