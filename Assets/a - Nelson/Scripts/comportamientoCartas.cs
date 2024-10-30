@@ -44,23 +44,69 @@ public class EncuestaManager : MonoBehaviour
         SiguientePregunta();
     }
 
-    // Método para cambiar al siguiente panel de pregunta
+    // Método para cambiar al siguiente panel de pregunta con efecto de fade
     private void SiguientePregunta()
     {
-        if (preguntaActual < panelesDePreguntas.Length - 1)
+        StartCoroutine(FadeOutAndNext());
+    }
+
+    private System.Collections.IEnumerator FadeOutAndNext()
+    {
+        // Obtén el CanvasGroup del panel actual
+        CanvasGroup currentPanelGroup = panelesDePreguntas[preguntaActual].GetComponent<CanvasGroup>();
+
+        // Verificar si el CanvasGroup existe
+        if (currentPanelGroup == null)
         {
-            panelesDePreguntas[preguntaActual].SetActive(false); // Desactivar el panel actual
-            preguntaActual++;
-            panelesDePreguntas[preguntaActual].SetActive(true); // Activar el siguiente panel
+            Debug.LogError("El panel actual no tiene un CanvasGroup adjunto.");
+            yield break; // Salir si no hay CanvasGroup
+        }
+
+        // Realiza el fade out
+        for (float t = 1; t > 0; t -= Time.deltaTime / 1.0f) // Cambiado a 1.0f para un fade out más largo
+        {
+            currentPanelGroup.alpha = t;
+            yield return null;
+        }
+
+        currentPanelGroup.alpha = 0; // Asegúrate de que esté completamente desvanecido
+
+        // Desactivar el panel actual
+        panelesDePreguntas[preguntaActual].SetActive(false);
+
+        // Aumentar la pregunta actual
+        preguntaActual++;
+
+        // Asegúrate de que no sobrepases el número de preguntas
+        if (preguntaActual < panelesDePreguntas.Length)
+        {
+            // Activar el siguiente panel y realizar fade in
+            CanvasGroup nextPanelGroup = panelesDePreguntas[preguntaActual].GetComponent<CanvasGroup>();
+
+            if (nextPanelGroup == null)
+            {
+                Debug.LogError("El siguiente panel no tiene un CanvasGroup adjunto.");
+                yield break; // Salir si no hay CanvasGroup
+            }
+
+            nextPanelGroup.alpha = 0; // Asegúrate de que esté invisible al principio
+            nextPanelGroup.gameObject.SetActive(true); // Activar el siguiente panel
+
+            // Realiza el fade in
+            for (float t = 0; t <= 1; t += Time.deltaTime / 1.0f) // Cambiado a 1.0f para un fade in más largo
+            {
+                nextPanelGroup.alpha = t;
+                yield return null;
+            }
         }
         else
         {
             // Encuesta terminada, mostrar resultados o lo que desees hacer al final
-            MostrarResultados();
+            yield return MostrarResultadosConFade();
         }
     }
 
-    private void MostrarResultados()
+    private System.Collections.IEnumerator MostrarResultadosConFade()
     {
         // Determinar el puntaje máximo entre los roles
         int mayorPuntaje = Mathf.Max(puntajeEmpresario, puntajeFilantropo, puntajeArtista, puntajePolitico);
@@ -88,7 +134,23 @@ public class EncuestaManager : MonoBehaviour
             panel.SetActive(false);
         }
 
-        // Activar el panel seleccionado
-        panelSeleccionado.SetActive(true);
+        // Asegúrate de que el panel seleccionado tenga un CanvasGroup
+        CanvasGroup selectedPanelGroup = panelSeleccionado.GetComponent<CanvasGroup>();
+        if (selectedPanelGroup == null)
+        {
+            selectedPanelGroup = panelSeleccionado.AddComponent<CanvasGroup>(); // Agrega un CanvasGroup si no existe
+        }
+
+        selectedPanelGroup.alpha = 0; // Asegúrate de que esté invisible al principio
+        panelSeleccionado.SetActive(true); // Activar el panel seleccionado
+
+        // Realiza el fade in para el resultado
+        for (float t = 0; t <= 1; t += Time.deltaTime / 1.0f) // Cambiado a 1.0f para un fade in más largo
+        {
+            selectedPanelGroup.alpha = t;
+            yield return null;
+        }
+
+        selectedPanelGroup.alpha = 1; // Asegúrate de que esté completamente visible
     }
 }
