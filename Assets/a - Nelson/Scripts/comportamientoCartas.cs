@@ -155,5 +155,28 @@ public class EncuestaManager : MonoBehaviour
         }
 
         selectedPanelGroup.alpha = 1; // Aseg�rate de que est� completamente visible
+
+        // Actualizar la variable pública con el resultado del test
+        if (panelSeleccionado == panelResultadoEmpresario)
+        {
+            PlayerPrefs.SetString("ResultadoTest", "Empresario");
+            PlayerPrefs.Save();
+        }
+        else if (panelSeleccionado == panelResultadoFilantropo)
+        {
+            PlayerPrefs.SetString("ResultadoTest", "Filantropo");
+            PlayerPrefs.Save();
+        }
+        else if (panelSeleccionado == panelResultadoArtista)
+        {
+            PlayerPrefs.SetString("ResultadoTest", "Artista");
+            PlayerPrefs.Save();
+        }
+        else if (panelSeleccionado == panelResultadoPolitico)
+        {
+            PlayerPrefs.SetString("ResultadoTest", "Politico");
+            PlayerPrefs.Save();
+        }
+        Debug.Log(PlayerPrefs.GetString("ResultadoTest", ""));
     }
 }
