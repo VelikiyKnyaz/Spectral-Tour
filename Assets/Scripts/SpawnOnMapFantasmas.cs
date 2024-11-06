@@ -4,7 +4,6 @@ using Mapbox.Unity.Map;
 using Mapbox.Unity.Utilities;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.SceneManagement;
 
 public class SpawnOnMapFantasmas : MonoBehaviour
 {
@@ -81,23 +80,43 @@ public class SpawnOnMapFantasmas : MonoBehaviour
         _locations = new Vector2d[_selectedLocationStrings.Length];
         _spawnedObjects = new List<GameObject>();
 
-        for (int i = 0; i < _selectedLocationStrings.Length; i++)
+        // Iniciar la corrutina para colocar cada elemento cada segundo
+        StartCoroutine(SpawnMarkersOverTime(_selectedLocationStrings));
+
+        // Suscribirse al evento OnUpdated del mapa
+        _map.OnUpdated += UpdateMarkerPositions;
+    }
+
+    IEnumerator SpawnMarkersOverTime(string[] selectedLocationStrings)
+    {
+        for (int i = 0; i < selectedLocationStrings.Length; i++)
         {
-            var locationString = _selectedLocationStrings[i];
-            _locations[i] = Conversions.StringToLatLon(locationString);
+            // Capturar el valor actual de 'i' en una variable local
+            int index = i;
+
+            var locationString = selectedLocationStrings[index];
+            _locations[index] = Conversions.StringToLatLon(locationString);
             var instance = Instantiate(_markerPrefab);
-            instance.transform.localPosition = _map.GeoToWorldPosition(_locations[i], true);
+
+            // **No parentamos el marcador al mapa**
+            // instance.transform.SetParent(_map.transform, false); // Esta línea se elimina
+
+            // Establecer posición y escala iniciales
+            instance.transform.position = _map.GeoToWorldPosition(_locations[index], true);
             instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
+
             _spawnedObjects.Add(instance);
+
+            // Esperar 1 segundo antes de spawnear el siguiente marcador
+            yield return new WaitForSeconds(1f);
         }
 
-        // Iniciar la comprobación periódica
+        // Iniciar la comprobación periódica después de spawnear todos los marcadores
         StartCoroutine(VerificarJugadorCerca());
     }
 
     void Update()
     {
-        int count = _spawnedObjects.Count;
         jugadorCerca = false;
 
         // Obtener la latitud y longitud actuales del jugador
@@ -105,12 +124,9 @@ public class SpawnOnMapFantasmas : MonoBehaviour
         double jugadorLongitud = Input.location.lastData.longitude;
         Vector2d jugadorPosicion = new Vector2d(jugadorLatitud, jugadorLongitud);
 
-        for (int i = 0; i < count; i++)
+        for (int i = 0; i < _spawnedObjects.Count; i++)
         {
-            var spawnedObject = _spawnedObjects[i];
             var location = _locations[i];
-            spawnedObject.transform.localPosition = _map.GeoToWorldPosition(location, true);
-            spawnedObject.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
 
             // Verificar si el jugador está cerca de algún punto spawneado (dentro de un radio de 250 m)
             double distancia = Vector2d.Distance(jugadorPosicion, location);
@@ -119,6 +135,19 @@ public class SpawnOnMapFantasmas : MonoBehaviour
                 jugadorCerca = true;
                 break;
             }
+        }
+    }
+
+    void UpdateMarkerPositions()
+    {
+        for (int i = 0; i < _spawnedObjects.Count; i++)
+        {
+            var spawnedObject = _spawnedObjects[i];
+            var location = _locations[i];
+
+            // **Actualizar la posición y escala en espacio mundial**
+            spawnedObject.transform.position = _map.GeoToWorldPosition(location, true);
+            spawnedObject.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
         }
     }
 
@@ -134,5 +163,10 @@ public class SpawnOnMapFantasmas : MonoBehaviour
             }
         }
     }
-}
 
+    void OnDestroy()
+    {
+        // Desuscribirse del evento OnUpdated para evitar errores
+        _map.OnUpdated -= UpdateMarkerPositions;
+    }
+}
