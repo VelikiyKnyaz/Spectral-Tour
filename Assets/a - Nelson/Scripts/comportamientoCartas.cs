@@ -9,19 +9,17 @@ public class EncuestaManager : MonoBehaviour
 
     // Referencia a los paneles de resultados
     public GameObject panelResultadoEmpresario;
-    public GameObject panelResultadoFilantropo;
     public GameObject panelResultadoArtista;
     public GameObject panelResultadoPolitico;
 
     // Puntajes para los diferentes roles
     private int puntajeEmpresario = 0;
-    private int puntajeFilantropo = 0;
     private int puntajeArtista = 0;
     private int puntajePolitico = 0;
 
     private int preguntaActual = 0;
 
-    // Método para seleccionar una respuesta
+    // Mï¿½todo para seleccionar una respuesta
     public void SeleccionarRespuesta(int tipoRol)
     {
         // Sumar puntaje de acuerdo al rol asociado a la respuesta seleccionada
@@ -30,13 +28,10 @@ public class EncuestaManager : MonoBehaviour
             case 0: // Empresario
                 puntajeEmpresario++;
                 break;
-            case 1: // Filántropo
-                puntajeFilantropo++;
-                break;
-            case 2: // Artista
+            case 1: // Artista
                 puntajeArtista++;
                 break;
-            case 3: // Político
+            case 2: // Polï¿½tico
                 puntajePolitico++;
                 break;
         }
@@ -44,7 +39,7 @@ public class EncuestaManager : MonoBehaviour
         SiguientePregunta();
     }
 
-    // Método para cambiar al siguiente panel de pregunta con efecto de fade
+    // Mï¿½todo para cambiar al siguiente panel de pregunta con efecto de fade
     private void SiguientePregunta()
     {
         StartCoroutine(FadeOutAndNext());
@@ -52,7 +47,7 @@ public class EncuestaManager : MonoBehaviour
 
     private System.Collections.IEnumerator FadeOutAndNext()
     {
-        // Obtén el CanvasGroup del panel actual
+        // Obtï¿½n el CanvasGroup del panel actual
         CanvasGroup currentPanelGroup = panelesDePreguntas[preguntaActual].GetComponent<CanvasGroup>();
 
         // Verificar si el CanvasGroup existe
@@ -63,13 +58,13 @@ public class EncuestaManager : MonoBehaviour
         }
 
         // Realiza el fade out
-        for (float t = 1; t > 0; t -= Time.deltaTime / 1.0f) // Cambiado a 1.0f para un fade out más largo
+        for (float t = 1; t > 0; t -= Time.deltaTime / 1.0f) // Cambiado a 1.0f para un fade out mï¿½s largo
         {
             currentPanelGroup.alpha = t;
             yield return null;
         }
 
-        currentPanelGroup.alpha = 0; // Asegúrate de que esté completamente desvanecido
+        currentPanelGroup.alpha = 0; // Asegï¿½rate de que estï¿½ completamente desvanecido
 
         // Desactivar el panel actual
         panelesDePreguntas[preguntaActual].SetActive(false);
@@ -77,7 +72,7 @@ public class EncuestaManager : MonoBehaviour
         // Aumentar la pregunta actual
         preguntaActual++;
 
-        // Asegúrate de que no sobrepases el número de preguntas
+        // Asegï¿½rate de que no sobrepases el nï¿½mero de preguntas
         if (preguntaActual < panelesDePreguntas.Length)
         {
             // Activar el siguiente panel y realizar fade in
@@ -89,11 +84,11 @@ public class EncuestaManager : MonoBehaviour
                 yield break; // Salir si no hay CanvasGroup
             }
 
-            nextPanelGroup.alpha = 0; // Asegúrate de que esté invisible al principio
+            nextPanelGroup.alpha = 0; // Asegï¿½rate de que estï¿½ invisible al principio
             nextPanelGroup.gameObject.SetActive(true); // Activar el siguiente panel
 
             // Realiza el fade in
-            for (float t = 0; t <= 1; t += Time.deltaTime / 1.0f) // Cambiado a 1.0f para un fade in más largo
+            for (float t = 0; t <= 1; t += Time.deltaTime / 1.0f) // Cambiado a 1.0f para un fade in mï¿½s largo
             {
                 nextPanelGroup.alpha = t;
                 yield return null;
@@ -108,23 +103,21 @@ public class EncuestaManager : MonoBehaviour
 
     private System.Collections.IEnumerator MostrarResultadosConFade()
     {
-        // Determinar el puntaje máximo entre los roles
-        int mayorPuntaje = Mathf.Max(puntajeEmpresario, puntajeFilantropo, puntajeArtista, puntajePolitico);
+        // Determinar el puntaje mï¿½ximo entre los roles
+        int mayorPuntaje = Mathf.Max(puntajeEmpresario, puntajeArtista, puntajePolitico);
 
-        // Crear una lista para almacenar los roles con el puntaje máximo
+        // Crear una lista para almacenar los roles con el puntaje mï¿½ximo
         List<GameObject> panelesConMayorPuntaje = new List<GameObject>();
 
-        // Agregar los paneles que tienen el puntaje máximo
+        // Agregar los paneles que tienen el puntaje mï¿½ximo
         if (puntajeEmpresario == mayorPuntaje)
             panelesConMayorPuntaje.Add(panelResultadoEmpresario);
-        if (puntajeFilantropo == mayorPuntaje)
-            panelesConMayorPuntaje.Add(panelResultadoFilantropo);
         if (puntajeArtista == mayorPuntaje)
             panelesConMayorPuntaje.Add(panelResultadoArtista);
         if (puntajePolitico == mayorPuntaje)
             panelesConMayorPuntaje.Add(panelResultadoPolitico);
 
-        // Elegir un panel aleatorio entre los que tienen el puntaje máximo
+        // Elegir un panel aleatorio entre los que tienen el puntaje mï¿½ximo
         int indiceAleatorio = Random.Range(0, panelesConMayorPuntaje.Count);
         GameObject panelSeleccionado = panelesConMayorPuntaje[indiceAleatorio];
 
@@ -134,23 +127,23 @@ public class EncuestaManager : MonoBehaviour
             panel.SetActive(false);
         }
 
-        // Asegúrate de que el panel seleccionado tenga un CanvasGroup
+        // Asegï¿½rate de que el panel seleccionado tenga un CanvasGroup
         CanvasGroup selectedPanelGroup = panelSeleccionado.GetComponent<CanvasGroup>();
         if (selectedPanelGroup == null)
         {
             selectedPanelGroup = panelSeleccionado.AddComponent<CanvasGroup>(); // Agrega un CanvasGroup si no existe
         }
 
-        selectedPanelGroup.alpha = 0; // Asegúrate de que esté invisible al principio
+        selectedPanelGroup.alpha = 0; // Asegï¿½rate de que estï¿½ invisible al principio
         panelSeleccionado.SetActive(true); // Activar el panel seleccionado
 
         // Realiza el fade in para el resultado
-        for (float t = 0; t <= 1; t += Time.deltaTime / 1.0f) // Cambiado a 1.0f para un fade in más largo
+        for (float t = 0; t <= 1; t += Time.deltaTime / 1.0f) // Cambiado a 1.0f para un fade in mï¿½s largo
         {
             selectedPanelGroup.alpha = t;
             yield return null;
         }
 
-        selectedPanelGroup.alpha = 1; // Asegúrate de que esté completamente visible
+        selectedPanelGroup.alpha = 1; // Asegï¿½rate de que estï¿½ completamente visible
     }
 }
