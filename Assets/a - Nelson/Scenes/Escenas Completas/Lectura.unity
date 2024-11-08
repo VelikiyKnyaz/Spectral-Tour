@@ -3843,9 +3843,9 @@ MonoBehaviour:
   - {fileID: 240628529}
   - {fileID: 568499689}
   - {fileID: 882465080}
-  panelResultadoEmpresario: {fileID: 0}
-  panelResultadoArtista: {fileID: 0}
-  panelResultadoPolitico: {fileID: 0}
+  panelResultadoEmpresario: {fileID: 1834936329}
+  panelResultadoArtista: {fileID: 926604531}
+  panelResultadoPolitico: {fileID: 1912271643}
 --- !u!4 &696440565
 Transform:
   m_ObjectHideFlags: 0
@@ -4254,7 +4254,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 056b7ea8c388291439ac557db23546d7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d8b3eb77c7bbddf42aee88008c5c3651, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5523,7 +5523,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &926604532
 Transform:
   m_ObjectHideFlags: 0
@@ -6774,8 +6774,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "L\xEDderes que guiaron a la ciudad a trav\xE9s de tiempos de cambio, influyendo
-    en la direcci\xF3n pol\xEDtica y social de Medell\xEDn"
+  m_text: "L\xEDderes que impulsaron el desarrollo econ\xF3mico de la ciudad, creando
+    empresas y fomentando el crecimiento industrial"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac181826d6e9e614580c3a05755e2028, type: 2}
   m_sharedMaterial: {fileID: -4344947175459467472, guid: ac181826d6e9e614580c3a05755e2028,
@@ -7522,8 +7522,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "L\xEDderes que guiaron a la ciudad a trav\xE9s de tiempos de cambio, influyendo
-    en la direcci\xF3n pol\xEDtica y social de Medell\xEDn"
+  m_text: "Artistas que plasmaron la vida social, pol\xEDtica y cultural de Medell\xEDn
+    a trav\xE9s de sus pinceles y esculturas"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac181826d6e9e614580c3a05755e2028, type: 2}
   m_sharedMaterial: {fileID: -4344947175459467472, guid: ac181826d6e9e614580c3a05755e2028,
@@ -9376,7 +9376,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1834936330
 Transform:
   m_ObjectHideFlags: 0
@@ -9927,7 +9927,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1912271644
 Transform:
   m_ObjectHideFlags: 0
@@ -10824,7 +10824,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 056b7ea8c388291439ac557db23546d7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 92e68625774ea9c46be030712edfe133, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
