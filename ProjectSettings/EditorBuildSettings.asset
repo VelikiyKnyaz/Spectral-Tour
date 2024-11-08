@@ -4,5 +4,26 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/a - Nelson/Scenes/Escenas Completas/Desafios.unity
+    guid: 12fbfd65f73cfb44c953567c4a0d9380
+  - enabled: 1
+    path: Assets/a - Nelson/Scenes/Escenas Completas/Home.unity
+    guid: f4501e9743e76af4084b7b00745324c6
+  - enabled: 1
+    path: Assets/a - Nelson/Scenes/Escenas Completas/Lectura.unity
+    guid: f135fd29958c6a44c89f951577c54c62
+  - enabled: 1
+    path: Assets/a - Nelson/Scenes/Escenas Completas/Libro.unity
+    guid: d945721f4da148a45980441789eb396c
+  - enabled: 1
+    path: Assets/a - Nelson/Scenes/Escenas Completas/Mapa.unity
+    guid: 8bc09488fee128d47a3ac82e7f967f8a
+  - enabled: 1
+    path: Assets/a - Nelson/Scenes/Escenas Completas/Tienda.unity
+    guid: 74d78c904d5630447b27812a35cf84df
+  - enabled: 1
+    path: Assets/a - Nelson/Scenes/Escenas Completas/Usuario.unity
+    guid: 90466a568fdfc614daa73db181978e96
   m_configObjects: {}
