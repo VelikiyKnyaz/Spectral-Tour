@@ -359,7 +359,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Realizando un voluntariado
+  m_text: Doing volunteer work
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac181826d6e9e614580c3a05755e2028, type: 2}
   m_sharedMaterial: {fileID: -4344947175459467472, guid: ac181826d6e9e614580c3a05755e2028,
@@ -423,7 +423,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 6.505402, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -494,7 +494,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Un proyecto que dejar\xE1 huella en la historia empresarial"
+  m_text: A project that will leave a lasting impact on business history
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac181826d6e9e614580c3a05755e2028, type: 2}
   m_sharedMaterial: {fileID: -4344947175459467472, guid: ac181826d6e9e614580c3a05755e2028,
@@ -629,7 +629,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Si pudieras dejar un legado, \xBFc\xF3mo preferir\xEDas ser recordado?\r\n"
+  m_text: 'If you could leave a legacy, how would you prefer to be remembered?
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac181826d6e9e614580c3a05755e2028, type: 2}
   m_sharedMaterial: {fileID: -4344947175459467472, guid: ac181826d6e9e614580c3a05755e2028,
@@ -887,7 +889,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Si tuvieras un d\xEDa libre, \xBFc\xF3mo preferir\xEDas disfrutarlo?\n"
+  m_text: 'If you had a day off, how would you prefer to spend it?
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac181826d6e9e614580c3a05755e2028, type: 2}
   m_sharedMaterial: {fileID: -4344947175459467472, guid: ac181826d6e9e614580c3a05755e2028,
@@ -1055,8 +1059,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "L\xEDderes que guiaron a la ciudad a trav\xE9s de tiempos de cambio, influyendo
-    en la direcci\xF3n pol\xEDtica y social de Medell\xEDn"
+  m_text: "Leaders who guided the city through times of change, influencing the political
+    and social direction of Medell\xEDn"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac181826d6e9e614580c3a05755e2028, type: 2}
   m_sharedMaterial: {fileID: -4344947175459467472, guid: ac181826d6e9e614580c3a05755e2028,
@@ -1120,7 +1124,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -476.21533, z: 0, w: -140.81207}
+  m_margin: {x: 20.653687, y: -476.21533, z: 29.885437, w: -140.81207}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1389,8 +1393,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Gracias a las cartas he descubierto que te sientes atra\xEDdo por los
-    siguientes fantasmas\n"
+  m_text: Thanks to the cards, I have discovered that you feel attracted to the following
+    historical ghosts
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac181826d6e9e614580c3a05755e2028, type: 2}
   m_sharedMaterial: {fileID: -4344947175459467472, guid: ac181826d6e9e614580c3a05755e2028,
@@ -1468,50 +1472,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 279889642}
   m_CullTransparentMesh: 1
---- !u!1 &290718234
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 290718236}
-  - component: {fileID: 290718235}
-  m_Layer: 0
-  m_Name: toggleMute
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &290718235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 290718234}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ae2903651bf0634d91d28837b4f0f07, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &290718236
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 290718234}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 760936608}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &293641752
 GameObject:
   m_ObjectHideFlags: 0
@@ -1645,8 +1605,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Deja que sus energ\xEDas te conduzcan a trav\xE9s de una aventura hist\xF3rica,
-    rememorando Medell\xEDn en su \xE9poca dorada"
+  m_text: "Let their energies guide you through a historical adventure, reminiscing
+    Medell\xEDn in its golden age"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac181826d6e9e614580c3a05755e2028, type: 2}
   m_sharedMaterial: {fileID: -4344947175459467472, guid: ac181826d6e9e614580c3a05755e2028,
@@ -1926,7 +1886,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Si tuvieras que crear algo nuevo en este mundo, \xBFqu\xE9 ser\xEDa? "
+  m_text: If you had to create something new in this world, what would it be?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac181826d6e9e614580c3a05755e2028, type: 2}
   m_sharedMaterial: {fileID: -4344947175459467472, guid: ac181826d6e9e614580c3a05755e2028,
@@ -2189,8 +2149,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: A las historias de empresarios que, con creatividad y perseverancia, construyeron
-    imperios a partir de una idea
+  m_text: Stories of entrepreneurs who, with creativity and perseverance, built empires
+    from a single idea
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac181826d6e9e614580c3a05755e2028, type: 2}
   m_sharedMaterial: {fileID: -4344947175459467472, guid: ac181826d6e9e614580c3a05755e2028,
@@ -2401,7 +2361,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Presione las cartas para continuar
+  m_text: Press the cards to continue
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ab008a7aa61b7bc49bd9f0795879ea08, type: 2}
   m_sharedMaterial: {fileID: 8932524454967209379, guid: ab008a7aa61b7bc49bd9f0795879ea08,
@@ -2987,7 +2947,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: La capacidad de idear soluciones a problemas cotidianos
+  m_text: The ability to come up with solutions to everyday problems
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac181826d6e9e614580c3a05755e2028, type: 2}
   m_sharedMaterial: {fileID: -4344947175459467472, guid: ac181826d6e9e614580c3a05755e2028,
@@ -3412,8 +3372,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: En hacer parte de decisiones que puedan mejorar la vida de las personas
-    que me rodean
+  m_text: In being part of decisions that can improve the lives of the people around
+    me
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac181826d6e9e614580c3a05755e2028, type: 2}
   m_sharedMaterial: {fileID: -4344947175459467472, guid: ac181826d6e9e614580c3a05755e2028,
@@ -3670,8 +3630,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Por inspirar a otros a encontrar prop\xF3sito y sentido a trav\xE9s de
-    las expresiones art\xEDsticas"
+  m_text: For inspiring others to find purpose and meaning through artistic expressions
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac181826d6e9e614580c3a05755e2028, type: 2}
   m_sharedMaterial: {fileID: -4344947175459467472, guid: ac181826d6e9e614580c3a05755e2028,
@@ -4306,7 +4265,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Presione las cartas para continuar
+  m_text: Press the cards to continue
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ab008a7aa61b7bc49bd9f0795879ea08, type: 2}
   m_sharedMaterial: {fileID: 8932524454967209379, guid: ab008a7aa61b7bc49bd9f0795879ea08,
@@ -4548,7 +4507,6 @@ Transform:
   - {fileID: 696440565}
   - {fileID: 2114667905}
   - {fileID: 359840169}
-  - {fileID: 290718236}
   - {fileID: 1993215840}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4685,8 +4643,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Elige entre las siguientes opciones, \xBFqu\xE9 es lo que m\xE1s valoras
-    en los dem\xE1s? \n"
+  m_text: 'Choose from the following options, what do you value most in others?
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac181826d6e9e614580c3a05755e2028, type: 2}
   m_sharedMaterial: {fileID: -4344947175459467472, guid: ac181826d6e9e614580c3a05755e2028,
@@ -4954,8 +4913,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: En idear nuevas maneras de transformar la forma en que vivimos y experimentamos
-    el entorno
+  m_text: In coming up with new ways to transform how we live and experience the
+    world around us
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac181826d6e9e614580c3a05755e2028, type: 2}
   m_sharedMaterial: {fileID: -4344947175459467472, guid: ac181826d6e9e614580c3a05755e2028,
@@ -5033,134 +4992,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 813195721}
   m_CullTransparentMesh: 1
---- !u!1 &843606840
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 843606841}
-  - component: {fileID: 843606842}
-  m_Layer: 0
-  m_Name: mariaT
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &843606841
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 843606840}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 769.95703, y: 883.1086, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1459085592}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &843606842
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 843606840}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 87245e85352e63647bba974e5adba052, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &847370192
 GameObject:
   m_ObjectHideFlags: 0
@@ -5218,8 +5049,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Deja que sus energ\xEDas te conduzcan a trav\xE9s de una aventura hist\xF3rica,
-    rememorando Medell\xEDn en su \xE9poca dorada"
+  m_text: "Let their energies guide you through a historical adventure, reminiscing
+    Medell\xEDn in its golden age"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac181826d6e9e614580c3a05755e2028, type: 2}
   m_sharedMaterial: {fileID: -4344947175459467472, guid: ac181826d6e9e614580c3a05755e2028,
@@ -5678,7 +5509,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Por construir un negocio exitoso y dejar un impacto en la econom\xEDa"
+  m_text: For building a successful business and leaving a mark on the economy
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac181826d6e9e614580c3a05755e2028, type: 2}
   m_sharedMaterial: {fileID: -4344947175459467472, guid: ac181826d6e9e614580c3a05755e2028,
@@ -5813,8 +5644,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Gracias a las cartas he descubierto que te sientes atra\xEDdo por los
-    siguientes fantasmas\n"
+  m_text: Thanks to the cards, I have discovered that you feel attracted to the following
+    historical ghosts
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac181826d6e9e614580c3a05755e2028, type: 2}
   m_sharedMaterial: {fileID: -4344947175459467472, guid: ac181826d6e9e614580c3a05755e2028,
@@ -6472,8 +6303,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Cuando buscas inspiraci\xF3n o respuestas, \xBFhacia qu\xE9 tipo de expresiones
-    tiendes a mirar m\xE1s frecuentemente?\n"
+  m_text: 'When you seek inspiration or answers, what type of expressions do you
+    tend to look at most frequently?
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac181826d6e9e614580c3a05755e2028, type: 2}
   m_sharedMaterial: {fileID: -4344947175459467472, guid: ac181826d6e9e614580c3a05755e2028,
@@ -6803,7 +6636,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Por influir en decisiones importantes que impactan la vida de muchos
+  m_text: For influencing important decisions that impact the lives of many
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac181826d6e9e614580c3a05755e2028, type: 2}
   m_sharedMaterial: {fileID: -4344947175459467472, guid: ac181826d6e9e614580c3a05755e2028,
@@ -6867,7 +6700,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 21.809937, y: 0, z: 21.809906, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -7014,8 +6847,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "A los l\xEDderes y movimientos pol\xEDticos que transformaron el curso
-    de la historia con sus decisiones y visi\xF3n de futuro"
+  m_text: Political leaders and movements that transformed the course of history
+    with their decisions and vision for the future
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac181826d6e9e614580c3a05755e2028, type: 2}
   m_sharedMaterial: {fileID: -4344947175459467472, guid: ac181826d6e9e614580c3a05755e2028,
@@ -7150,8 +6983,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "L\xEDderes que impulsaron el desarrollo econ\xF3mico de la ciudad, creando
-    empresas y fomentando el crecimiento industrial"
+  m_text: Leaders who drove the city's economic development, creating businesses
+    and fostering industrial growth
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac181826d6e9e614580c3a05755e2028, type: 2}
   m_sharedMaterial: {fileID: -4344947175459467472, guid: ac181826d6e9e614580c3a05755e2028,
@@ -7419,7 +7252,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Visitando museos, muestras de arte o sitios hist\xF3ricos"
+  m_text: Visiting museums, art exhibitions, or historical sites
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac181826d6e9e614580c3a05755e2028, type: 2}
   m_sharedMaterial: {fileID: -4344947175459467472, guid: ac181826d6e9e614580c3a05755e2028,
@@ -7775,7 +7608,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: La habilidad para conectar con otros
+  m_text: The ability to connect with others
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac181826d6e9e614580c3a05755e2028, type: 2}
   m_sharedMaterial: {fileID: -4344947175459467472, guid: ac181826d6e9e614580c3a05755e2028,
@@ -7910,8 +7743,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Artistas que plasmaron la vida social, pol\xEDtica y cultural de Medell\xEDn
-    a trav\xE9s de sus pinceles y esculturas"
+  m_text: "Artists who captured the social, political, and cultural life of Medell\xEDn
+    through their brushes and sculptures"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac181826d6e9e614580c3a05755e2028, type: 2}
   m_sharedMaterial: {fileID: -4344947175459467472, guid: ac181826d6e9e614580c3a05755e2028,
@@ -8046,8 +7879,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Deja que sus energ\xEDas te conduzcan a trav\xE9s de una aventura hist\xF3rica,
-    rememorando Medell\xEDn en su \xE9poca dorada"
+  m_text: "Let their energies guide you through a historical adventure, reminiscing
+    Medell\xEDn in its golden age"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac181826d6e9e614580c3a05755e2028, type: 2}
   m_sharedMaterial: {fileID: -4344947175459467472, guid: ac181826d6e9e614580c3a05755e2028,
@@ -8155,7 +7988,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 843606841}
   - {fileID: 1255101619}
   - {fileID: 62938956}
   m_Father: {fileID: 958319252}
@@ -8202,7 +8034,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1865322650}
   - {fileID: 1867978996}
   - {fileID: 163865543}
   m_Father: {fileID: 958319252}
@@ -8675,7 +8506,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sumergido en historias de personas exitosas
+  m_text: Immersed in stories of successful people
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac181826d6e9e614580c3a05755e2028, type: 2}
   m_sharedMaterial: {fileID: -4344947175459467472, guid: ac181826d6e9e614580c3a05755e2028,
@@ -8810,7 +8641,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Una ley que ayude a combatir la delincuencia
+  m_text: A law that helps combat crime
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac181826d6e9e614580c3a05755e2028, type: 2}
   m_sharedMaterial: {fileID: -4344947175459467472, guid: ac181826d6e9e614580c3a05755e2028,
@@ -8945,7 +8776,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "En tu vida diaria, \xBFd\xF3nde encuentras mayor sentido o prop\xF3sito?\n"
+  m_text: 'In your daily life, where do you find the most meaning or purpose?
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac181826d6e9e614580c3a05755e2028, type: 2}
   m_sharedMaterial: {fileID: -4344947175459467472, guid: ac181826d6e9e614580c3a05755e2028,
@@ -9080,8 +8913,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "A las catedrales y monumentos que reflejan el ingenio humano y la visi\xF3n
-    arquitect\xF3nica de grandes civilizaciones"
+  m_text: Cathedrals and monuments that reflect human ingenuity and the architectural
+    vision of great civilizations
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac181826d6e9e614580c3a05755e2028, type: 2}
   m_sharedMaterial: {fileID: -4344947175459467472, guid: ac181826d6e9e614580c3a05755e2028,
@@ -9437,8 +9270,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Gracias a las cartas he descubierto que te sientes atra\xEDdo por los
-    siguientes fantasmas\n"
+  m_text: Thanks to the cards, I have discovered that you feel attracted to the following
+    historical ghosts
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac181826d6e9e614580c3a05755e2028, type: 2}
   m_sharedMaterial: {fileID: -4344947175459467472, guid: ac181826d6e9e614580c3a05755e2028,
@@ -9573,7 +9406,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "En la creaci\xF3n de un legado, ya sea de ideas o proyectos"
+  m_text: In creating a legacy, whether through ideas or projects
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac181826d6e9e614580c3a05755e2028, type: 2}
   m_sharedMaterial: {fileID: -4344947175459467472, guid: ac181826d6e9e614580c3a05755e2028,
@@ -9708,7 +9541,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Una obra art\xEDstica que inspire a generaciones"
+  m_text: An artistic work that will inspire future generations
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac181826d6e9e614580c3a05755e2028, type: 2}
   m_sharedMaterial: {fileID: -4344947175459467472, guid: ac181826d6e9e614580c3a05755e2028,
@@ -9979,134 +9812,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1838024727}
   m_CullTransparentMesh: 1
---- !u!1 &1865322649
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1865322650}
-  - component: {fileID: 1865322651}
-  m_Layer: 0
-  m_Name: mariaT
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1865322650
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1865322649}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1464649350}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &1865322651
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1865322649}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: bdfd14261448fd0458843ebaf83239e9, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &1867978995
 GameObject:
   m_ObjectHideFlags: 0
@@ -11009,7 +10714,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Presione las cartas para continuar
+  m_text: Press the cards to continue
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ab008a7aa61b7bc49bd9f0795879ea08, type: 2}
   m_sharedMaterial: {fileID: 8932524454967209379, guid: ab008a7aa61b7bc49bd9f0795879ea08,
@@ -11144,8 +10849,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Una visi\xF3n innovadora y habilidad para desarrollar ideas de manera
-    creativa"
+  m_text: An innovative vision and the ability to develop ideas creatively
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac181826d6e9e614580c3a05755e2028, type: 2}
   m_sharedMaterial: {fileID: -4344947175459467472, guid: ac181826d6e9e614580c3a05755e2028,
