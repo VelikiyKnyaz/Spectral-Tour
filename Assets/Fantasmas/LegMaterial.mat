@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WaterMaterial
+  m_Name: LegMaterial
   m_Shader: {fileID: -6465566751694194690, guid: 89e1edf072b6571489c3b0ea7323b5ac,
     type: 3}
   m_Parent: {fileID: 2100000, guid: 7a2bb6202ae22074c8b602debdb65ee4, type: 2}
@@ -41,8 +41,8 @@ Material:
     m_Floats:
     - _QueueControl: 1
     - _QueueOffset: 0
-    - _RefracStrength: 0.01
-    - _WaveStrength: 0.005
+    - _RefracStrength: 0.05
+    - _WaveStrength: 1
     m_Colors:
-    - _WaveVelocity: {r: 0.06, g: 0.06, b: 0, a: 0}
+    - _WaveVelocity: {r: 0.05, g: 0.05, b: 0, a: 0}
   m_BuildTextureStacks: []
