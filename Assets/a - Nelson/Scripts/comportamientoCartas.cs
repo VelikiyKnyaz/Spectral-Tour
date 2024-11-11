@@ -9,7 +9,6 @@ public class EncuestaManager : MonoBehaviour
 
     // Referencia a los paneles de resultados
     public GameObject panelResultadoEmpresario;
-    public GameObject panelResultadoFilantropo;
     public GameObject panelResultadoArtista;
     public GameObject panelResultadoPolitico;
 
@@ -18,7 +17,6 @@ public class EncuestaManager : MonoBehaviour
 
     // Puntajes para los diferentes roles
     private int puntajeEmpresario = 0;
-    private int puntajeFilantropo = 0;
     private int puntajeArtista = 0;
     private int puntajePolitico = 0;
 
@@ -33,13 +31,10 @@ public class EncuestaManager : MonoBehaviour
             case 0: // Empresario
                 puntajeEmpresario++;
                 break;
-            case 1: // Fil�ntropo
-                puntajeFilantropo++;
-                break;
-            case 2: // Artista
+            case 1: // Artista
                 puntajeArtista++;
                 break;
-            case 3: // Pol�tico
+            case 2: // Pol�tico
                 puntajePolitico++;
                 break;
         }
@@ -112,7 +107,7 @@ public class EncuestaManager : MonoBehaviour
     private System.Collections.IEnumerator MostrarResultadosConFade()
     {
         // Determinar el puntaje m�ximo entre los roles
-        int mayorPuntaje = Mathf.Max(puntajeEmpresario, puntajeFilantropo, puntajeArtista, puntajePolitico);
+        int mayorPuntaje = Mathf.Max(puntajeEmpresario, puntajeArtista, puntajePolitico);
 
         // Crear una lista para almacenar los roles con el puntaje m�ximo
         List<GameObject> panelesConMayorPuntaje = new List<GameObject>();
@@ -120,8 +115,6 @@ public class EncuestaManager : MonoBehaviour
         // Agregar los paneles que tienen el puntaje m�ximo
         if (puntajeEmpresario == mayorPuntaje)
             panelesConMayorPuntaje.Add(panelResultadoEmpresario);
-        if (puntajeFilantropo == mayorPuntaje)
-            panelesConMayorPuntaje.Add(panelResultadoFilantropo);
         if (puntajeArtista == mayorPuntaje)
             panelesConMayorPuntaje.Add(panelResultadoArtista);
         if (puntajePolitico == mayorPuntaje)
@@ -160,11 +153,6 @@ public class EncuestaManager : MonoBehaviour
         if (panelSeleccionado == panelResultadoEmpresario)
         {
             PlayerPrefs.SetString("ResultadoTest", "Empresario");
-            PlayerPrefs.Save();
-        }
-        else if (panelSeleccionado == panelResultadoFilantropo)
-        {
-            PlayerPrefs.SetString("ResultadoTest", "Filantropo");
             PlayerPrefs.Save();
         }
         else if (panelSeleccionado == panelResultadoArtista)
